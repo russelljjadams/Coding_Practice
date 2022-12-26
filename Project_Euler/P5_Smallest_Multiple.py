@@ -13,9 +13,6 @@ import math
 from functools import reduce
 
 def smallest_multiple(n):
-  # Compute the GCD of all the numbers from 1 to n
-  gcd = reduce(math.gcd, range(1, n+1))
-  
   # Compute the LCM of all the numbers from 1 to n
   lcm = reduce(lambda x, y: (x*y)//math.gcd(x, y), range(1, n+1))
   
